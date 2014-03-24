@@ -8,7 +8,7 @@ package model;
  * @version $Revision: 1.0 $
  */
 
-public class Player {
+public abstract class Player {
 
 	// -- Instance variables -----------------------------------------
 	protected String name;
