@@ -23,7 +23,7 @@ public class Stones {
 	}
 
 	public void setStoneAmount(int StoneAmount) {
-		// note: if 2 player = 40, if 3 or 4 player = 20?
+	
 		stoneAmount = StoneAmount;
 	}
 
