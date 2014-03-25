@@ -106,8 +106,26 @@ public class Board {
 	 * @return TRUE als er 5 elementen van dezelfde kleur horizontaal zijn, FALSE als er geen 5 elementen van dezelfde kleur horizontaal zijn
 	 */
 	public boolean horizontalWinner()	{
-		int[] line = new int[5];
-		
+		boolean winner = false;
+		int line = 0;
+		ArrayList<Field> value = fields;
+		while(line < 9 && winner == false)	{
+			int starter = 0;
+			while(starter < 5 && winner == false)	{
+				int firstValue = value.get(starter).getColor();
+				if(firstValue != 0)	{
+					int pointer = 0;
+					boolean theSame = true;
+					while(pointer < 5 && theSame == true)	{
+						theSame = value.get(pointer).getColor() == value.get(pointer++).getColor();
+					}
+					winner = theSame;
+				}
+				starter++;
+			}
+			line++;
+		}
+		return winner;
 	}
 
 	/**
