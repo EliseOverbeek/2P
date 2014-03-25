@@ -39,4 +39,11 @@ public class Field {
 		return empty;
 	}
 	
+	/**
+	 * Geeft een int terug van dit veld wat de kleur representeerd 
+	 * @return 0 als het veld geen kleur bevat, 1 t/m 4 als dit veld een kleur heeft
+	 */
+	public int getColor()	{
+		return this.color;
+	}
 }
