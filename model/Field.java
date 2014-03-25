@@ -29,7 +29,7 @@ public class Field {
 	
 	/**
 	 * Kijkt of de instantie variabele leeg is of niet
-	 * @return
+	 * @return TRUE als het veld leeg is, FALSE als het veld bezet is
 	 */
 	public boolean isEmpty()	{
 		boolean empty = true;
