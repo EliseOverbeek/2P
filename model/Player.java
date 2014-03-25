@@ -40,15 +40,7 @@ public abstract class Player {
 		return name;
 	}
 
-	// / /**
-	// * Bepaalt het vakje voor de volgende zet.
-	// * @require <code>bord != null && !bord.isVol()</code>
-	// * @ensure <code>bord.isVakje(result) && bord.isLeegVakje(result)</code>
-	// * @param bord het spelersbord
-	// * @return keuze van het vakje van deze Speler
-	//
-	// public abstract int bepaalZet(Bord bord);
-	// */
+
 
 	// commands-------------------------------------------------------------------
 
@@ -61,15 +53,27 @@ public abstract class Player {
 
 	
 	// takeTurn() : boolean
+	/**
+	 * 
+	 */
 	public boolean takeStone() {
 		return this.stones.removeStone();
 	}
 
+	/**
+	 * 
+	 * @return the colornumber that this player is playing with
+	 */
 	public int getColorNumber(){
 		return this.color;
 	}
 	
 	// setGameValues(color : int, stones : int) : void
+	/**
+	 * method to initialize values for the game.
+	 * the color a player is player with and the amount of stones of the that color that the player gets. 
+	 * the amount must be 20 or 40. 
+	 */
 	public void setGameValues(int color, int stones) {
 		this.color = color;
 		this.stones.setStoneAmount(stones);
