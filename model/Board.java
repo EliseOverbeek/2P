@@ -8,7 +8,6 @@ import java.util.ArrayList;
  * @author Elise Overbeek en Peter Beers
  * @version $Revision: 1.0 $
  */
-
 public class Board {
 	
 	private final int DIM = 9;
@@ -52,14 +51,14 @@ public class Board {
 	 * @param fieldArea is een int van 0 t/m 8 die een bepaald gedeelte van het bord representeerd
 	 * @param rotation is een char die door middel van 'l' aangeeft dat fieldArea links moet omkeren en door middel van 'r' aangeeft dat fieldArea recht moet omkeren
 	 */
-/*	public void rotate(int fieldArea, char rotation)	{
+	public void rotate(int x, int y, char rotation)	{
 		int[] area = fieldsArea(fieldArea);
 		int areaPoint = 0;
 		while (areaPoint < 9)	{
 			// slimme implementatie nog voor verzinnen
 		}
 	}
-*/	
+	
 	/**
 	 * Maakt een lijst aan met daarin de velden van een bepaal gebied
 	 * @param fieldArea < 9 && fieldArea >=0
