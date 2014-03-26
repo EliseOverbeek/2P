@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Board {
 	
 	private final int DIM = 9;
+	private final int DIMPART = 3;
 	private ArrayList<ArrayList<Field>> fields;
 	
 	/**
@@ -48,53 +49,30 @@ public class Board {
 	
 	/**
 	 * Draai een deel van het bord de meegegeven kant op
-	 * @param fieldArea is een int van 0 t/m 8 die een bepaald gedeelte van het bord representeerd
+	 * @param y >= 0
+	 * @param x >= 0
 	 * @param rotation is een char die door middel van 'l' aangeeft dat fieldArea links moet omkeren en door middel van 'r' aangeeft dat fieldArea recht moet omkeren
 	 */
 	public void rotate(int x, int y, char rotation)	{
-		int[] area = fieldsArea(fieldArea);
-		int areaPoint = 0;
-		while (areaPoint < 9)	{
-			// slimme implementatie nog voor verzinnen
+		ArrayList<ArrayList<Field>> temporaryFields = fields;
+		if(rotation == 'l')	{
+			for (int i = y; i < DIMPART; i++)	{
+				for (int j = x; j < DIMPART; j++)	{
+					
+				}
+				i++;
+			}
+		}
+		else	{
+			for (int i = y; i < DIMPART; i++)	{
+				for (int j = x; j < DIMPART; j++)	{
+					
+				}
+				i++;
+			}
 		}
 	}
 	
-	/**
-	 * Maakt een lijst aan met daarin de velden van een bepaal gebied
-	 * @param fieldArea < 9 && fieldArea >=0
-	 * @return een array
-	 */
-/*	private int[] fieldsArea(int fieldArea)	{
-		int[] area = new int[9];
-		int pointer = 0;
-		int lastfield;
-		
-		if (fieldArea < 3)	{
-		lastfield = fieldArea * 3;	
-		}
-		else if (fieldArea < 6)	{
-		lastfield = (27 + (fieldArea - 3) * 3);	
-		}
-		else	{
-		lastfield = (54 + (fieldArea - 3) * 3);
-		}
-		area[pointer] = lastfield;
-		pointer++;
-		
-		//code technisch verbeteren
-		while (pointer < area.length)	{
-			area[pointer] = lastfield++;
-			area[pointer] = lastfield++;
-			area[pointer] = lastfield + 7;
-			area[pointer] = lastfield++;
-			area[pointer] = lastfield++;
-			area[pointer] = lastfield + 7;
-			area[pointer] = lastfield++;
-			area[pointer] = lastfield++;
-		}
-		return area;
-	}
-*/	
 	/**
 	 * Controleerd of er 5 elementen op een rij van dezelfde kleur en diagonaal zijn
 	 * @return TRUE als er 5 elementen van dezelfde kleur diagonaal zijn, FALSE als er geen 5 elementen van dezelfde kleur diagonaal zijn
