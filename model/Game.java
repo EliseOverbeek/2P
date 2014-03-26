@@ -38,6 +38,12 @@ public class Game {
 		board.fillField(x, y, color); 
 	}
 	
+	/**
+	 * Draai een deel van het bord de meegegeven kant op
+	 * @param y >= 0
+	 * @param x >= 0
+	 * @param rotation is een char die door middel van 'l' aangeeft dat fieldArea links moet omkeren en door middel van 'r' aangeeft dat fieldArea recht moet omkeren
+	 */	
 	public void rotateFields(int x, int y, char rotation)	{
 		board.rotate(x, y, rotation);
 	}
